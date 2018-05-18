@@ -1,0 +1,362 @@
+\hypertarget{class_radio_container}{}\section{Radio\+Container$<$ R $>$ Class Template Reference}
+\label{class_radio_container}\index{Radio\+Container$<$ R $>$@{Radio\+Container$<$ R $>$}}
+
+
+{\ttfamily \#include $<$Phy\+Layer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_radio_container_acba7b3f419573dc72a58e000072b1d15}{Radio\+Container}} (R $\ast$Radio\+User)
+\item 
+\mbox{\hyperlink{class_radio_container_af2367ea0e92fa1654a4329d13ed90e47}{$\sim$\+Radio\+Container}} ()
+\item 
+void \mbox{\hyperlink{class_radio_container_aefcc86fb08cd1857cf6dcd8ba1bd7c90}{Send}} (\mbox{\hyperlink{_define_8h_a81bbaee3ae5a0ec0040b6faedbf80b2f}{e\+Modulation\+Type}} Mac\+Tx\+Modulation\+Current, uint32\+\_\+t Tx\+Frequency\+Mac, uint8\+\_\+t Tx\+Power\+Mac, uint8\+\_\+t Tx\+Sf\+Mac, \mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}} Tx\+Bw\+Mac, uint16\+\_\+t Tx\+Payload\+Size\+Mac)
+\item 
+void \mbox{\hyperlink{class_radio_container_a9a7e676f1735ea1f67898d6e3014ded1}{Receive}} (void)
+\item 
+void \mbox{\hyperlink{class_radio_container_a4ea6769301a5aaa8e33e22562e024619}{Isr\+Radio}} (void)
+\item 
+void \mbox{\hyperlink{class_radio_container_ab4ae2d79a43dca2bdf0900cc2e3aac5c}{Attach\+Isr}} (void)
+\item 
+void \mbox{\hyperlink{class_radio_container_a8819af2363c07fc158989c57a45e5e48}{Detach\+Isr}} (void)
+\item 
+int \mbox{\hyperlink{class_radio_container_a3ffe014538d877752663a6f747247554}{Get\+Radio\+State}} (void)
+\item 
+void \mbox{\hyperlink{class_radio_container_a2ca1eae7a18c37aefa507b59ad1bcbef}{Set\+Rx\+Config}} (\mbox{\hyperlink{_define_8h_a81bbaee3ae5a0ec0040b6faedbf80b2f}{e\+Modulation\+Type}} Rx\+Modulation, uint32\+\_\+t Rx\+Frequency\+Mac, uint8\+\_\+t Rx\+Sf\+Mac, \mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}} Rx\+Bw\+Mac, uint32\+\_\+t Rx\+Window\+Ms)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container_a59cf65c721a176fdd0cf2d0039a18242}{Get\+Tx\+Frequency}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_radio_container_afd4dc2a290ab1f6d4cf7920ab457fac7}{Callback\+Isr\+Radio}} (void $\ast$obj)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+R $\ast$ \mbox{\hyperlink{class_radio_container_a30b5b1397632040096b08e56e2ec1d47}{Radio}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container_ad91ae082ac2890e7b71546c4b7efb5ba}{Tx\+Phy\+Payload}} \mbox{[}\mbox{\hyperlink{_define_8h_ade046d6a940b0e4d9f3ae9415066ee6f}{M\+A\+X\+\_\+\+T\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container_a100c2c3e3d71652fca93d8ee0a5ecc9c}{Rx\+Phy\+Payload}} \mbox{[}\mbox{\hyperlink{_define_8h_ade046d6a940b0e4d9f3ae9415066ee6f}{M\+A\+X\+\_\+\+T\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container_a2b84534ef69df6313c3c7cf9edcb234d}{Rx\+Phy\+Payload\+Size}}
+\item 
+int \mbox{\hyperlink{class_radio_container_a8814f4b3203f8f9fac24e77291f41dd3}{Rx\+Phy\+Payload\+Snr}}
+\item 
+int \mbox{\hyperlink{class_radio_container_a198c252436c6a365cb07d9d073d9d50d}{Rx\+Phy\+Payload\+Rssi}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_radio_container_abb44acd5f52b34e0a1ffaa3a1dec0bbd}{Tx\+Payload\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container_a3fce662f22e5d0beaf3b25df353c0bae}{Dev\+Addr\+Isr}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container_adbb1e0ef33a7fdeeb2e27b54a4808220}{Reg\+Irq\+Flag}}
+\item 
+\mbox{\hyperlink{_define_8h_abe3daafdb4fec314926c12003b3ad390}{e\+Join\+Status}} \mbox{\hyperlink{class_radio_container_a4c19319bc32e8f18dc42b70f852cd24e}{Joined\+Status}}
+\item 
+int \mbox{\hyperlink{class_radio_container_aaeabc6b1b8012038246bc14e1da1462f}{State\+Radio\+Process}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container_a82ecd21f7fb6701a66037821c6175e44}{Timestamp\+Rtc\+Isr}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container_a087adc0271190a23c893774d1a9f9dc0}{Last\+Time\+Rx\+Windows\+Ms}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container_a26d15cb55aa6f8b4f0bb977f3c4a4b38}{Symbol\+Duration}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class R$>$\newline
+class Radio\+Container$<$ R $>$}
+
+
+
+Definition at line 30 of file Phy\+Layer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_radio_container_acba7b3f419573dc72a58e000072b1d15}\label{class_radio_container_acba7b3f419573dc72a58e000072b1d15}} 
+\index{Radio\+Container@{Radio\+Container}!Radio\+Container@{Radio\+Container}}
+\index{Radio\+Container@{Radio\+Container}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Radio\+Container()}{RadioContainer()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+\mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::\mbox{\hyperlink{class_radio_container}{Radio\+Container}} (\begin{DoxyParamCaption}\item[{R $\ast$}]{Radio\+User }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Phy\+Layer.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_af2367ea0e92fa1654a4329d13ed90e47}\label{class_radio_container_af2367ea0e92fa1654a4329d13ed90e47}} 
+\index{Radio\+Container@{Radio\+Container}!````~Radio\+Container@{$\sim$\+Radio\+Container}}
+\index{````~Radio\+Container@{$\sim$\+Radio\+Container}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Radio\+Container()}{~RadioContainer()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+\mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::$\sim$\mbox{\hyperlink{class_radio_container}{Radio\+Container}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Phy\+Layer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_radio_container_ab4ae2d79a43dca2bdf0900cc2e3aac5c}\label{class_radio_container_ab4ae2d79a43dca2bdf0900cc2e3aac5c}} 
+\index{Radio\+Container@{Radio\+Container}!Attach\+Isr@{Attach\+Isr}}
+\index{Attach\+Isr@{Attach\+Isr}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Attach\+Isr()}{AttachIsr()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Attach\+Isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file Phy\+Layer.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_afd4dc2a290ab1f6d4cf7920ab457fac7}\label{class_radio_container_afd4dc2a290ab1f6d4cf7920ab457fac7}} 
+\index{Radio\+Container@{Radio\+Container}!Callback\+Isr\+Radio@{Callback\+Isr\+Radio}}
+\index{Callback\+Isr\+Radio@{Callback\+Isr\+Radio}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Callback\+Isr\+Radio()}{CallbackIsrRadio()}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+static void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Callback\+Isr\+Radio (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 38 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a8819af2363c07fc158989c57a45e5e48}\label{class_radio_container_a8819af2363c07fc158989c57a45e5e48}} 
+\index{Radio\+Container@{Radio\+Container}!Detach\+Isr@{Detach\+Isr}}
+\index{Detach\+Isr@{Detach\+Isr}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Detach\+Isr()}{DetachIsr()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Detach\+Isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file Phy\+Layer.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_a3ffe014538d877752663a6f747247554}\label{class_radio_container_a3ffe014538d877752663a6f747247554}} 
+\index{Radio\+Container@{Radio\+Container}!Get\+Radio\+State@{Get\+Radio\+State}}
+\index{Get\+Radio\+State@{Get\+Radio\+State}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Get\+Radio\+State()}{GetRadioState()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+int \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Get\+Radio\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file Phy\+Layer.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_a59cf65c721a176fdd0cf2d0039a18242}\label{class_radio_container_a59cf65c721a176fdd0cf2d0039a18242}} 
+\index{Radio\+Container@{Radio\+Container}!Get\+Tx\+Frequency@{Get\+Tx\+Frequency}}
+\index{Get\+Tx\+Frequency@{Get\+Tx\+Frequency}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Get\+Tx\+Frequency()}{GetTxFrequency()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Get\+Tx\+Frequency (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file Phy\+Layer.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_a4ea6769301a5aaa8e33e22562e024619}\label{class_radio_container_a4ea6769301a5aaa8e33e22562e024619}} 
+\index{Radio\+Container@{Radio\+Container}!Isr\+Radio@{Isr\+Radio}}
+\index{Isr\+Radio@{Isr\+Radio}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Isr\+Radio()}{IsrRadio()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Isr\+Radio (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file Radio\+Isr\+Routine.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_a9a7e676f1735ea1f67898d6e3014ded1}\label{class_radio_container_a9a7e676f1735ea1f67898d6e3014ded1}} 
+\index{Radio\+Container@{Radio\+Container}!Receive@{Receive}}
+\index{Receive@{Receive}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Receive()}{Receive()}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Receive (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_radio_container_aefcc86fb08cd1857cf6dcd8ba1bd7c90}\label{class_radio_container_aefcc86fb08cd1857cf6dcd8ba1bd7c90}} 
+\index{Radio\+Container@{Radio\+Container}!Send@{Send}}
+\index{Send@{Send}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_define_8h_a81bbaee3ae5a0ec0040b6faedbf80b2f}{e\+Modulation\+Type}}}]{Mac\+Tx\+Modulation\+Current,  }\item[{uint32\+\_\+t}]{Tx\+Frequency\+Mac,  }\item[{uint8\+\_\+t}]{Tx\+Power\+Mac,  }\item[{uint8\+\_\+t}]{Tx\+Sf\+Mac,  }\item[{\mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}}}]{Tx\+Bw\+Mac,  }\item[{uint16\+\_\+t}]{Tx\+Payload\+Size\+Mac }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file Phy\+Layer.\+cpp.
+
+\mbox{\Hypertarget{class_radio_container_a2ca1eae7a18c37aefa507b59ad1bcbef}\label{class_radio_container_a2ca1eae7a18c37aefa507b59ad1bcbef}} 
+\index{Radio\+Container@{Radio\+Container}!Set\+Rx\+Config@{Set\+Rx\+Config}}
+\index{Set\+Rx\+Config@{Set\+Rx\+Config}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Set\+Rx\+Config()}{SetRxConfig()}}
+{\footnotesize\ttfamily template$<$class R $>$ \\
+void \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Set\+Rx\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_define_8h_a81bbaee3ae5a0ec0040b6faedbf80b2f}{e\+Modulation\+Type}}}]{Rx\+Modulation,  }\item[{uint32\+\_\+t}]{Rx\+Frequency\+Mac,  }\item[{uint8\+\_\+t}]{Rx\+Sf\+Mac,  }\item[{\mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}}}]{Rx\+Bw\+Mac,  }\item[{uint32\+\_\+t}]{Rx\+Window\+Ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Phy\+Layer.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_radio_container_a3fce662f22e5d0beaf3b25df353c0bae}\label{class_radio_container_a3fce662f22e5d0beaf3b25df353c0bae}} 
+\index{Radio\+Container@{Radio\+Container}!Dev\+Addr\+Isr@{Dev\+Addr\+Isr}}
+\index{Dev\+Addr\+Isr@{Dev\+Addr\+Isr}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Dev\+Addr\+Isr}{DevAddrIsr}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Dev\+Addr\+Isr}
+
+
+
+Definition at line 50 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a4c19319bc32e8f18dc42b70f852cd24e}\label{class_radio_container_a4c19319bc32e8f18dc42b70f852cd24e}} 
+\index{Radio\+Container@{Radio\+Container}!Joined\+Status@{Joined\+Status}}
+\index{Joined\+Status@{Joined\+Status}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Joined\+Status}{JoinedStatus}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+\mbox{\hyperlink{_define_8h_abe3daafdb4fec314926c12003b3ad390}{e\+Join\+Status}} \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Joined\+Status}
+
+
+
+Definition at line 52 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a087adc0271190a23c893774d1a9f9dc0}\label{class_radio_container_a087adc0271190a23c893774d1a9f9dc0}} 
+\index{Radio\+Container@{Radio\+Container}!Last\+Time\+Rx\+Windows\+Ms@{Last\+Time\+Rx\+Windows\+Ms}}
+\index{Last\+Time\+Rx\+Windows\+Ms@{Last\+Time\+Rx\+Windows\+Ms}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Last\+Time\+Rx\+Windows\+Ms}{LastTimeRxWindowsMs}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Last\+Time\+Rx\+Windows\+Ms}
+
+
+
+Definition at line 55 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a30b5b1397632040096b08e56e2ec1d47}\label{class_radio_container_a30b5b1397632040096b08e56e2ec1d47}} 
+\index{Radio\+Container@{Radio\+Container}!Radio@{Radio}}
+\index{Radio@{Radio}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Radio}{Radio}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+R$\ast$ \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Radio}
+
+
+
+Definition at line 34 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_adbb1e0ef33a7fdeeb2e27b54a4808220}\label{class_radio_container_adbb1e0ef33a7fdeeb2e27b54a4808220}} 
+\index{Radio\+Container@{Radio\+Container}!Reg\+Irq\+Flag@{Reg\+Irq\+Flag}}
+\index{Reg\+Irq\+Flag@{Reg\+Irq\+Flag}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Reg\+Irq\+Flag}{RegIrqFlag}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Reg\+Irq\+Flag}
+
+
+
+Definition at line 51 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a100c2c3e3d71652fca93d8ee0a5ecc9c}\label{class_radio_container_a100c2c3e3d71652fca93d8ee0a5ecc9c}} 
+\index{Radio\+Container@{Radio\+Container}!Rx\+Phy\+Payload@{Rx\+Phy\+Payload}}
+\index{Rx\+Phy\+Payload@{Rx\+Phy\+Payload}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Rx\+Phy\+Payload}{RxPhyPayload}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Rx\+Phy\+Payload\mbox{[}\mbox{\hyperlink{_define_8h_ade046d6a940b0e4d9f3ae9415066ee6f}{M\+A\+X\+\_\+\+T\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+
+
+Definition at line 45 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a198c252436c6a365cb07d9d073d9d50d}\label{class_radio_container_a198c252436c6a365cb07d9d073d9d50d}} 
+\index{Radio\+Container@{Radio\+Container}!Rx\+Phy\+Payload\+Rssi@{Rx\+Phy\+Payload\+Rssi}}
+\index{Rx\+Phy\+Payload\+Rssi@{Rx\+Phy\+Payload\+Rssi}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Rx\+Phy\+Payload\+Rssi}{RxPhyPayloadRssi}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+int \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Rx\+Phy\+Payload\+Rssi}
+
+
+
+Definition at line 48 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a2b84534ef69df6313c3c7cf9edcb234d}\label{class_radio_container_a2b84534ef69df6313c3c7cf9edcb234d}} 
+\index{Radio\+Container@{Radio\+Container}!Rx\+Phy\+Payload\+Size@{Rx\+Phy\+Payload\+Size}}
+\index{Rx\+Phy\+Payload\+Size@{Rx\+Phy\+Payload\+Size}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Rx\+Phy\+Payload\+Size}{RxPhyPayloadSize}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Rx\+Phy\+Payload\+Size}
+
+
+
+Definition at line 46 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a8814f4b3203f8f9fac24e77291f41dd3}\label{class_radio_container_a8814f4b3203f8f9fac24e77291f41dd3}} 
+\index{Radio\+Container@{Radio\+Container}!Rx\+Phy\+Payload\+Snr@{Rx\+Phy\+Payload\+Snr}}
+\index{Rx\+Phy\+Payload\+Snr@{Rx\+Phy\+Payload\+Snr}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Rx\+Phy\+Payload\+Snr}{RxPhyPayloadSnr}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+int \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Rx\+Phy\+Payload\+Snr}
+
+
+
+Definition at line 47 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_aaeabc6b1b8012038246bc14e1da1462f}\label{class_radio_container_aaeabc6b1b8012038246bc14e1da1462f}} 
+\index{Radio\+Container@{Radio\+Container}!State\+Radio\+Process@{State\+Radio\+Process}}
+\index{State\+Radio\+Process@{State\+Radio\+Process}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{State\+Radio\+Process}{StateRadioProcess}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+int \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::State\+Radio\+Process}
+
+
+
+Definition at line 53 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a26d15cb55aa6f8b4f0bb977f3c4a4b38}\label{class_radio_container_a26d15cb55aa6f8b4f0bb977f3c4a4b38}} 
+\index{Radio\+Container@{Radio\+Container}!Symbol\+Duration@{Symbol\+Duration}}
+\index{Symbol\+Duration@{Symbol\+Duration}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Symbol\+Duration}{SymbolDuration}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Symbol\+Duration}
+
+
+
+Definition at line 56 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_a82ecd21f7fb6701a66037821c6175e44}\label{class_radio_container_a82ecd21f7fb6701a66037821c6175e44}} 
+\index{Radio\+Container@{Radio\+Container}!Timestamp\+Rtc\+Isr@{Timestamp\+Rtc\+Isr}}
+\index{Timestamp\+Rtc\+Isr@{Timestamp\+Rtc\+Isr}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Timestamp\+Rtc\+Isr}{TimestampRtcIsr}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Timestamp\+Rtc\+Isr}
+
+
+
+Definition at line 54 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_abb44acd5f52b34e0a1ffaa3a1dec0bbd}\label{class_radio_container_abb44acd5f52b34e0a1ffaa3a1dec0bbd}} 
+\index{Radio\+Container@{Radio\+Container}!Tx\+Payload\+Size@{Tx\+Payload\+Size}}
+\index{Tx\+Payload\+Size@{Tx\+Payload\+Size}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Tx\+Payload\+Size}{TxPayloadSize}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint16\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Tx\+Payload\+Size}
+
+
+
+Definition at line 49 of file Phy\+Layer.\+h.
+
+\mbox{\Hypertarget{class_radio_container_ad91ae082ac2890e7b71546c4b7efb5ba}\label{class_radio_container_ad91ae082ac2890e7b71546c4b7efb5ba}} 
+\index{Radio\+Container@{Radio\+Container}!Tx\+Phy\+Payload@{Tx\+Phy\+Payload}}
+\index{Tx\+Phy\+Payload@{Tx\+Phy\+Payload}!Radio\+Container@{Radio\+Container}}
+\subsubsection{\texorpdfstring{Tx\+Phy\+Payload}{TxPhyPayload}}
+{\footnotesize\ttfamily template$<$class R$>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_radio_container}{Radio\+Container}}$<$ R $>$\+::Tx\+Phy\+Payload\mbox{[}\mbox{\hyperlink{_define_8h_ade046d6a940b0e4d9f3ae9415066ee6f}{M\+A\+X\+\_\+\+T\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+
+
+Definition at line 44 of file Phy\+Layer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\mbox{\hyperlink{_phy_layer_8h}{Phy\+Layer.\+h}}\item 
+C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\mbox{\hyperlink{_phy_layer_8cpp}{Phy\+Layer.\+cpp}}\item 
+C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\mbox{\hyperlink{_radio_isr_routine_8cpp}{Radio\+Isr\+Routine.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,244 @@
+\hypertarget{_class_s_t_m32_l4_8cpp}{}\section{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.github.\+io/\+M\+Mstack/\+Mcu\+Api/\+Class\+S\+T\+M32\+L4.cpp File Reference}
+\label{_class_s_t_m32_l4_8cpp}\index{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Mcu\+Api/\+Class\+S\+T\+M32\+L4.\+cpp@{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Mcu\+Api/\+Class\+S\+T\+M32\+L4.\+cpp}}
+{\ttfamily \#include \char`\"{}Class\+S\+T\+M32\+L4.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Api\+Mcu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32l4xx\+\_\+hal.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a852595a6503889229de93a50c9dd607f}{W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE}}~30
+\item 
+\#define \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_abbaaec7f6da578031bcfcaba5ef21691}{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE}}~( ( uint32\+\_\+t )0x8000000 )
+\item 
+\#define \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_aaca117fec55f07a37ccac637f3242fb3}{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND}}~( ( uint32\+\_\+t )\mbox{\hyperlink{_class_s_t_m32_l4_8cpp_abbaaec7f6da578031bcfcaba5ef21691}{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE}} + 4096 )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a77f4fc5408fc13129ce0acde3f6b48be}{Flash\+Page\+Erase}} (uint32\+\_\+t page, uint32\+\_\+t banks)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_afdfcae51f72a307e9f9409edb171fc11}{Eeprom\+Mcu\+Write\+Buffer}} (uint32\+\_\+t addr, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t size)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_aa817e0cc592e2efee61e1e6166aa6490}{Eeprom\+Mcu\+Read\+Buffer}} (uint32\+\_\+t addr, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t size)
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a0e26026167f3e9c61304c52264ef5a87}{Eeprom\+Mcu\+Set\+Device\+Addr}} (uint8\+\_\+t addr)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_aced0747a3f974a1575ab42ea310f22e8}{Eeprom\+Mcu\+Get\+Device\+Addr}} (void)
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a6e8166444b1de80910fd2a1e6eeb6ac5}{Wake\+Up\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a52547b70b5c6791db977dc9870318951}{Wake\+Up\+Alarm\+M\+Second}} (int delay)
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_ac2743d0c7dc8dac647ca11ba59330c5e}{Wake\+Up\+Alarm\+Second}} (int delay)
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_af395599d8a77faa78d99c1beb0e72de3}{L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler}} (void)
+\item 
+void \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a87bf4d11679836bdee8a8d29862c2630}{Irq\+Handler\+Radio}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+P\+I\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{_class_s_t_m32_l4_8cpp_a9c6222bae4d0328dd843ae099623b40b}{hspi1}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_abbaaec7f6da578031bcfcaba5ef21691}\label{_class_s_t_m32_l4_8cpp_abbaaec7f6da578031bcfcaba5ef21691}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE@{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE}}
+\index{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE@{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE}{DATA\_EEPROM\_BASE}}
+{\footnotesize\ttfamily \#define D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE~( ( uint32\+\_\+t )0x8000000 )}
+
+D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+OM base address in the alias region 
+
+Definition at line 33 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_aaca117fec55f07a37ccac637f3242fb3}\label{_class_s_t_m32_l4_8cpp_aaca117fec55f07a37ccac637f3242fb3}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND@{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND}}
+\index{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND@{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND}{DATA\_EEPROM\_END}}
+{\footnotesize\ttfamily \#define D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+ND~( ( uint32\+\_\+t )\mbox{\hyperlink{_class_s_t_m32_l4_8cpp_abbaaec7f6da578031bcfcaba5ef21691}{D\+A\+T\+A\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+B\+A\+SE}} + 4096 )}
+
+D\+A\+TA E\+E\+P\+R\+OM end address in the alias region 
+
+Definition at line 34 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a852595a6503889229de93a50c9dd607f}\label{_class_s_t_m32_l4_8cpp_a852595a6503889229de93a50c9dd607f}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE@{W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE}}
+\index{W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE@{W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE}{WATCH\_DOG\_PERIOD\_RELEASE}}
+{\footnotesize\ttfamily \#define W\+A\+T\+C\+H\+\_\+\+D\+O\+G\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+R\+E\+L\+E\+A\+SE~30}
+
+
+
+Definition at line 21 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_aced0747a3f974a1575ab42ea310f22e8}\label{_class_s_t_m32_l4_8cpp_aced0747a3f974a1575ab42ea310f22e8}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Eeprom\+Mcu\+Get\+Device\+Addr@{Eeprom\+Mcu\+Get\+Device\+Addr}}
+\index{Eeprom\+Mcu\+Get\+Device\+Addr@{Eeprom\+Mcu\+Get\+Device\+Addr}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Eeprom\+Mcu\+Get\+Device\+Addr()}{EepromMcuGetDeviceAddr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Eeprom\+Mcu\+Get\+Device\+Addr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_aa817e0cc592e2efee61e1e6166aa6490}\label{_class_s_t_m32_l4_8cpp_aa817e0cc592e2efee61e1e6166aa6490}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Eeprom\+Mcu\+Read\+Buffer@{Eeprom\+Mcu\+Read\+Buffer}}
+\index{Eeprom\+Mcu\+Read\+Buffer@{Eeprom\+Mcu\+Read\+Buffer}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Eeprom\+Mcu\+Read\+Buffer()}{EepromMcuReadBuffer()}}
+{\footnotesize\ttfamily uint8\+\_\+t Eeprom\+Mcu\+Read\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a0e26026167f3e9c61304c52264ef5a87}\label{_class_s_t_m32_l4_8cpp_a0e26026167f3e9c61304c52264ef5a87}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Eeprom\+Mcu\+Set\+Device\+Addr@{Eeprom\+Mcu\+Set\+Device\+Addr}}
+\index{Eeprom\+Mcu\+Set\+Device\+Addr@{Eeprom\+Mcu\+Set\+Device\+Addr}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Eeprom\+Mcu\+Set\+Device\+Addr()}{EepromMcuSetDeviceAddr()}}
+{\footnotesize\ttfamily void Eeprom\+Mcu\+Set\+Device\+Addr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_afdfcae51f72a307e9f9409edb171fc11}\label{_class_s_t_m32_l4_8cpp_afdfcae51f72a307e9f9409edb171fc11}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Eeprom\+Mcu\+Write\+Buffer@{Eeprom\+Mcu\+Write\+Buffer}}
+\index{Eeprom\+Mcu\+Write\+Buffer@{Eeprom\+Mcu\+Write\+Buffer}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Eeprom\+Mcu\+Write\+Buffer()}{EepromMcuWriteBuffer()}}
+{\footnotesize\ttfamily uint8\+\_\+t Eeprom\+Mcu\+Write\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a77f4fc5408fc13129ce0acde3f6b48be}\label{_class_s_t_m32_l4_8cpp_a77f4fc5408fc13129ce0acde3f6b48be}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Flash\+Page\+Erase@{Flash\+Page\+Erase}}
+\index{Flash\+Page\+Erase@{Flash\+Page\+Erase}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Flash\+Page\+Erase()}{FlashPageErase()}}
+{\footnotesize\ttfamily void Flash\+Page\+Erase (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{page,  }\item[{uint32\+\_\+t}]{banks }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a87bf4d11679836bdee8a8d29862c2630}\label{_class_s_t_m32_l4_8cpp_a87bf4d11679836bdee8a8d29862c2630}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Irq\+Handler\+Radio@{Irq\+Handler\+Radio}}
+\index{Irq\+Handler\+Radio@{Irq\+Handler\+Radio}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Irq\+Handler\+Radio()}{IrqHandlerRadio()}}
+{\footnotesize\ttfamily void Irq\+Handler\+Radio (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_af395599d8a77faa78d99c1beb0e72de3}\label{_class_s_t_m32_l4_8cpp_af395599d8a77faa78d99c1beb0e72de3}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler@{L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler}}
+\index{L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler@{L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler()}{LPTIM1\_IRQHandler()}}
+{\footnotesize\ttfamily void L\+P\+T\+I\+M1\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Irq Handler dedicated for Low power Timer reserved for lorawan layer \begin{DoxyRemark}{Remarks}
+Low\+Power\+Timer\+Lora.\+timer\+I\+S\+R() is used to callback the timer Interupt Service Routine of the current obj \mbox{\hyperlink{class_lora_wan_object}{Lora\+Wan\+Object}} 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & void \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 176 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a52547b70b5c6791db977dc9870318951}\label{_class_s_t_m32_l4_8cpp_a52547b70b5c6791db977dc9870318951}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Wake\+Up\+Alarm\+M\+Second@{Wake\+Up\+Alarm\+M\+Second}}
+\index{Wake\+Up\+Alarm\+M\+Second@{Wake\+Up\+Alarm\+M\+Second}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Wake\+Up\+Alarm\+M\+Second()}{WakeUpAlarmMSecond()}}
+{\footnotesize\ttfamily void Wake\+Up\+Alarm\+M\+Second (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})}
+
+Wake\+Up\+Alarm\+M\+Second \+: Configures the application wake up timer with a delay duration in ms When the timer expires , the rtc block generates an It to wake up the Mcu \begin{DoxyRemark}{Remarks}
+this function is not used by the Lo\+Ra\+W\+AN object, only provided for application purposes. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & int delay in ms \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_ac2743d0c7dc8dac647ca11ba59330c5e}\label{_class_s_t_m32_l4_8cpp_ac2743d0c7dc8dac647ca11ba59330c5e}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Wake\+Up\+Alarm\+Second@{Wake\+Up\+Alarm\+Second}}
+\index{Wake\+Up\+Alarm\+Second@{Wake\+Up\+Alarm\+Second}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Wake\+Up\+Alarm\+Second()}{WakeUpAlarmSecond()}}
+{\footnotesize\ttfamily void Wake\+Up\+Alarm\+Second (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})}
+
+Wake\+Up\+Alarm\+Mecond \+: Configure the wake up timer with a delay duration in second \begin{DoxyRemark}{Remarks}
+this function is not used by the Lo\+Ra\+W\+AN object, only provided for application purposes. When the timer expires , the rtc block generates an It to wake up the Mcu
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & int delay in s \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 160 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a6e8166444b1de80910fd2a1e6eeb6ac5}\label{_class_s_t_m32_l4_8cpp_a6e8166444b1de80910fd2a1e6eeb6ac5}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!Wake\+Up\+Init@{Wake\+Up\+Init}}
+\index{Wake\+Up\+Init@{Wake\+Up\+Init}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{Wake\+Up\+Init()}{WakeUpInit()}}
+{\footnotesize\ttfamily void Wake\+Up\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Wake\+Up\+Init \+: Init the application wake up rtc timer. ~\newline
+\begin{DoxyRemark}{Remarks}
+this timer is not used by the Lo\+Ra\+W\+AN object , only used to wake up from applciation\textquotesingle{}s low power sleep mode. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & void \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 132 of file Class\+S\+T\+M32\+L4.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_class_s_t_m32_l4_8cpp_a9c6222bae4d0328dd843ae099623b40b}\label{_class_s_t_m32_l4_8cpp_a9c6222bae4d0328dd843ae099623b40b}} 
+\index{Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}!hspi1@{hspi1}}
+\index{hspi1@{hspi1}!Class\+S\+T\+M32\+L4.\+cpp@{Class\+S\+T\+M32\+L4.\+cpp}}
+\subsubsection{\texorpdfstring{hspi1}{hspi1}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Handle\+Type\+Def hspi1}
+
+Create a S\+PI master connected to the specified pins
+
+
+\begin{DoxyParams}{Parameters}
+{\em mosi} & S\+PI Master Out, Slave In pin \\
+\hline
+{\em miso} & S\+PI Master In, Slave Out pin \\
+\hline
+{\em sclk} & S\+PI Clock pin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 339 of file Class\+S\+T\+M32\+L4.\+cpp.
+

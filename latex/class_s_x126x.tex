@@ -1,0 +1,136 @@
+\hypertarget{class_s_x126x}{}\section{S\+X126x Class Reference}
+\label{class_s_x126x}\index{S\+X126x@{S\+X126x}}
+
+
+{\ttfamily \#include $<$S\+X126x.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_x126x_a325ba815822bd31fcae9d4effcc1aea5}{S\+X126x}} (\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} Busy, \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} nss, \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} reset, \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} Interrupt)
+\item 
+\mbox{\hyperlink{class_s_x126x_ade46beffc61c639d93c2cad02b92c902}{$\sim$\+S\+X126x}} ()
+\item 
+void \mbox{\hyperlink{class_s_x126x_a0e9939c82c76d571d71a69d6941a6780}{Clear\+Irq\+Flags}} (void)
+\item 
+\mbox{\hyperlink{_define_8h_ab50e1f84d728c6ede52a9606a2a262d5}{Irq\+Flags\+\_\+t}} \mbox{\hyperlink{class_s_x126x_ac50ac9d688ef2647e10d471f3cdf0ec0}{Get\+Irq\+Flags}} (void)
+\item 
+void \mbox{\hyperlink{class_s_x126x_a53fde8ee3d816f58b1c493195fd96872}{Fetch\+Payload}} (uint8\+\_\+t $\ast$payload\+Size, uint8\+\_\+t \mbox{\hyperlink{structpayload}{payload}}\mbox{[}255\mbox{]}, int16\+\_\+t $\ast$snr, int16\+\_\+t $\ast$signal\+Rssi)
+\item 
+void \mbox{\hyperlink{class_s_x126x_a062d1439cea26e3e531e5df8ade82f0b}{Reset}} (void)
+\item 
+void \mbox{\hyperlink{class_s_x126x_a9199137a513971e5af0b5be2637cb19a}{Send\+Lora}} (uint8\+\_\+t $\ast$\mbox{\hyperlink{structpayload}{payload}}, uint8\+\_\+t payload\+Size, uint8\+\_\+t SF, \mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}} BW, uint32\+\_\+t channel, int8\+\_\+t power)
+\item 
+void \mbox{\hyperlink{class_s_x126x_a027376634d0192e48ce57891cef8b6f3}{Rx\+Lora}} (\mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}} BW, uint8\+\_\+t SF, uint32\+\_\+t channel, uint32\+\_\+t rx\+Timeout\+Ms)
+\item 
+void \mbox{\hyperlink{class_s_x126x_a920aa7de87e1b05c47ad1a95002e00c2}{Sleep}} (bool cold\+Start)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file S\+X126x.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_x126x_a325ba815822bd31fcae9d4effcc1aea5}\label{class_s_x126x_a325ba815822bd31fcae9d4effcc1aea5}} 
+\index{S\+X126x@{S\+X126x}!S\+X126x@{S\+X126x}}
+\index{S\+X126x@{S\+X126x}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{S\+X126x()}{SX126x()}}
+{\footnotesize\ttfamily S\+X126x\+::\+S\+X126x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{Busy,  }\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{nss,  }\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{reset,  }\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{Interrupt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_ade46beffc61c639d93c2cad02b92c902}\label{class_s_x126x_ade46beffc61c639d93c2cad02b92c902}} 
+\index{S\+X126x@{S\+X126x}!````~S\+X126x@{$\sim$\+S\+X126x}}
+\index{````~S\+X126x@{$\sim$\+S\+X126x}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{$\sim$\+S\+X126x()}{~SX126x()}}
+{\footnotesize\ttfamily S\+X126x\+::$\sim$\+S\+X126x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file S\+X126x.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_x126x_a0e9939c82c76d571d71a69d6941a6780}\label{class_s_x126x_a0e9939c82c76d571d71a69d6941a6780}} 
+\index{S\+X126x@{S\+X126x}!Clear\+Irq\+Flags@{Clear\+Irq\+Flags}}
+\index{Clear\+Irq\+Flags@{Clear\+Irq\+Flags}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Clear\+Irq\+Flags()}{ClearIrqFlags()}}
+{\footnotesize\ttfamily void S\+X126x\+::\+Clear\+Irq\+Flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_a53fde8ee3d816f58b1c493195fd96872}\label{class_s_x126x_a53fde8ee3d816f58b1c493195fd96872}} 
+\index{S\+X126x@{S\+X126x}!Fetch\+Payload@{Fetch\+Payload}}
+\index{Fetch\+Payload@{Fetch\+Payload}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Fetch\+Payload()}{FetchPayload()}}
+{\footnotesize\ttfamily void S\+X126x\+::\+Fetch\+Payload (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{payload\+Size,  }\item[{uint8\+\_\+t}]{payload\mbox{[}255\mbox{]},  }\item[{int16\+\_\+t $\ast$}]{snr,  }\item[{int16\+\_\+t $\ast$}]{signal\+Rssi }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_ac50ac9d688ef2647e10d471f3cdf0ec0}\label{class_s_x126x_ac50ac9d688ef2647e10d471f3cdf0ec0}} 
+\index{S\+X126x@{S\+X126x}!Get\+Irq\+Flags@{Get\+Irq\+Flags}}
+\index{Get\+Irq\+Flags@{Get\+Irq\+Flags}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Get\+Irq\+Flags()}{GetIrqFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_define_8h_ab50e1f84d728c6ede52a9606a2a262d5}{Irq\+Flags\+\_\+t}} S\+X126x\+::\+Get\+Irq\+Flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_a062d1439cea26e3e531e5df8ade82f0b}\label{class_s_x126x_a062d1439cea26e3e531e5df8ade82f0b}} 
+\index{S\+X126x@{S\+X126x}!Reset@{Reset}}
+\index{Reset@{Reset}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void S\+X126x\+::\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_a027376634d0192e48ce57891cef8b6f3}\label{class_s_x126x_a027376634d0192e48ce57891cef8b6f3}} 
+\index{S\+X126x@{S\+X126x}!Rx\+Lora@{Rx\+Lora}}
+\index{Rx\+Lora@{Rx\+Lora}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Rx\+Lora()}{RxLora()}}
+{\footnotesize\ttfamily void S\+X126x\+::\+Rx\+Lora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}}}]{BW,  }\item[{uint8\+\_\+t}]{SF,  }\item[{uint32\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{rx\+Timeout\+Ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_a9199137a513971e5af0b5be2637cb19a}\label{class_s_x126x_a9199137a513971e5af0b5be2637cb19a}} 
+\index{S\+X126x@{S\+X126x}!Send\+Lora@{Send\+Lora}}
+\index{Send\+Lora@{Send\+Lora}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Send\+Lora()}{SendLora()}}
+{\footnotesize\ttfamily void S\+X126x\+::\+Send\+Lora (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{payload\+Size,  }\item[{uint8\+\_\+t}]{SF,  }\item[{\mbox{\hyperlink{_define_8h_a6cbb491180e131f374cdbe63880c85e1}{e\+Band\+Width}}}]{BW,  }\item[{uint32\+\_\+t}]{channel,  }\item[{int8\+\_\+t}]{power }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file S\+X126x.\+cpp.
+
+\mbox{\Hypertarget{class_s_x126x_a920aa7de87e1b05c47ad1a95002e00c2}\label{class_s_x126x_a920aa7de87e1b05c47ad1a95002e00c2}} 
+\index{S\+X126x@{S\+X126x}!Sleep@{Sleep}}
+\index{Sleep@{Sleep}!S\+X126x@{S\+X126x}}
+\subsubsection{\texorpdfstring{Sleep()}{Sleep()}}
+{\footnotesize\ttfamily void S\+X126x\+::\+Sleep (\begin{DoxyParamCaption}\item[{bool}]{cold\+Start }\end{DoxyParamCaption})}
+
+
+
+Definition at line 154 of file S\+X126x.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/radio/\+S\+X126\+X/\mbox{\hyperlink{_s_x126x_8h}{S\+X126x.\+h}}\item 
+C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/radio/\+S\+X126\+X/\mbox{\hyperlink{_s_x126x_8cpp}{S\+X126x.\+cpp}}\end{DoxyCompactItemize}

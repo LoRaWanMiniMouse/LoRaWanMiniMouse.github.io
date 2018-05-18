@@ -1,0 +1,109 @@
+\hypertarget{_mini_mouse_cmac_8cpp}{}\section{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.github.\+io/\+M\+Mstack/\+Minimouse\+Src/\+Mini\+Mouse\+Cmac.cpp File Reference}
+\label{_mini_mouse_cmac_8cpp}\index{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\+Mini\+Mouse\+Cmac.\+cpp@{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\+Mini\+Mouse\+Cmac.\+cpp}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}aes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmac.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_cmac_8cpp_af9ca930f6a22a67738997972244303e3}{L\+S\+H\+I\+FT}}(v,  r)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_cmac_8cpp_a24a57a540896e74aca18138ed0104e6e}{X\+OR}}(v,  r)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_mini_mouse_cmac_8cpp_a0344ba56e27c8029332069892af08737}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init}} (\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$ctx)
+\item 
+void \mbox{\hyperlink{_mini_mouse_cmac_8cpp_a0cbe43f8858ba5fbf5bbd5f03e362170}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key}} (\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$ctx, const uint8\+\_\+t key\mbox{[}\mbox{\hyperlink{cmac_8h_a8391095f8961b29bdf0818f764d0d66a}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+TH}}\mbox{]})
+\item 
+void \mbox{\hyperlink{_mini_mouse_cmac_8cpp_ad1be03bf3df1635dd5cbf8943f4d04f6}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update}} (\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$ctx, const uint8\+\_\+t $\ast$data, uint32\+\_\+t len)
+\item 
+void \mbox{\hyperlink{_mini_mouse_cmac_8cpp_a8ea4da33d50984199d8a91bc0ab86b15}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final}} (uint8\+\_\+t digest\mbox{[}\mbox{\hyperlink{cmac_8h_a9d43ce8be9e275dc33b7992c5cf6623f}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+L\+E\+N\+G\+TH}}\mbox{]}, \mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_mini_mouse_cmac_8cpp_af9ca930f6a22a67738997972244303e3}\label{_mini_mouse_cmac_8cpp_af9ca930f6a22a67738997972244303e3}} 
+\index{Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}!L\+S\+H\+I\+FT@{L\+S\+H\+I\+FT}}
+\index{L\+S\+H\+I\+FT@{L\+S\+H\+I\+FT}!Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}}
+\subsubsection{\texorpdfstring{L\+S\+H\+I\+FT}{LSHIFT}}
+{\footnotesize\ttfamily \#define L\+S\+H\+I\+FT(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{r }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                       \(\backslash\)
+  int32\_t i;                                                  \(\backslash\)
+           for (i = 0; i < 15; i++)                                \(\backslash\)
+                    (r)[i] = (v)[i] << 1 | (v)[i + 1] >> 7;         \(\backslash\)
+            (r)[15] = (v)[15] << 1;                                 \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+Definition at line 42 of file Mini\+Mouse\+Cmac.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_cmac_8cpp_a24a57a540896e74aca18138ed0104e6e}\label{_mini_mouse_cmac_8cpp_a24a57a540896e74aca18138ed0104e6e}} 
+\index{Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}!X\+OR@{X\+OR}}
+\index{X\+OR@{X\+OR}!Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}}
+\subsubsection{\texorpdfstring{X\+OR}{XOR}}
+{\footnotesize\ttfamily \#define X\+OR(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{r }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                          \(\backslash\)
+            int32\_t i;                                                  \(\backslash\)
+            for (i = 0; i < 16; i++)     \(\backslash\)
+        \{   \(\backslash\)
+                    (r)[i] = (r)[i] ^ (v)[i]; \(\backslash\)
+        \}                          \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0) \(\backslash\)
+\end{DoxyCode}
+
+
+Definition at line 49 of file Mini\+Mouse\+Cmac.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_mini_mouse_cmac_8cpp_a8ea4da33d50984199d8a91bc0ab86b15}\label{_mini_mouse_cmac_8cpp_a8ea4da33d50984199d8a91bc0ab86b15}} 
+\index{Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}!A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final}}
+\index{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final}!Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}}
+\subsubsection{\texorpdfstring{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final()}{AES\_CMAC\_Final()}}
+{\footnotesize\ttfamily void A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Final (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{digest\mbox{[}\+A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]},  }\item[{\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file Mini\+Mouse\+Cmac.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_cmac_8cpp_a0344ba56e27c8029332069892af08737}\label{_mini_mouse_cmac_8cpp_a0344ba56e27c8029332069892af08737}} 
+\index{Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}!A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init}}
+\index{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init}!Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}}
+\subsubsection{\texorpdfstring{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init()}{AES\_CMAC\_Init()}}
+{\footnotesize\ttfamily void A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file Mini\+Mouse\+Cmac.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_cmac_8cpp_a0cbe43f8858ba5fbf5bbd5f03e362170}\label{_mini_mouse_cmac_8cpp_a0cbe43f8858ba5fbf5bbd5f03e362170}} 
+\index{Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}!A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key}}
+\index{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key}!Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}}
+\subsubsection{\texorpdfstring{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key()}{AES\_CMAC\_SetKey()}}
+{\footnotesize\ttfamily void A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Set\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$}]{ctx,  }\item[{const uint8\+\_\+t}]{key\mbox{[}\+A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file Mini\+Mouse\+Cmac.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_cmac_8cpp_ad1be03bf3df1635dd5cbf8943f4d04f6}\label{_mini_mouse_cmac_8cpp_ad1be03bf3df1635dd5cbf8943f4d04f6}} 
+\index{Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}!A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update}}
+\index{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update@{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update}!Mini\+Mouse\+Cmac.\+cpp@{Mini\+Mouse\+Cmac.\+cpp}}
+\subsubsection{\texorpdfstring{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update()}{AES\_CMAC\_Update()}}
+{\footnotesize\ttfamily void A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cmac_8h_af41c475ab2b2b5fdf68252112c391434}{A\+E\+S\+\_\+\+C\+M\+A\+C\+\_\+\+C\+TX}} $\ast$}]{ctx,  }\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file Mini\+Mouse\+Cmac.\+cpp.
+

@@ -1,0 +1,528 @@
+\hypertarget{class_mcu_s_t_m32_l0}{}\section{Mcu\+S\+T\+M32\+L0 Class Reference}
+\label{class_mcu_s_t_m32_l0}\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+
+
+{\ttfamily \#include $<$Class\+S\+T\+M32\+L0.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mcu_s_t_m32_l0_ae747db3a6df937b07744e0ba492e1a23}{Mcu\+S\+T\+M32\+L0}} (\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} mosi, \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} miso, \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} sclk)
+\item 
+\mbox{\hyperlink{class_mcu_s_t_m32_l0_af440c13e851db1f24a3a1b33990495eb}{$\sim$\+Mcu\+S\+T\+M32\+L0}} ()
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_accd83e34546e9a8e5ad338a3ef5a39a3}{Init\+Mcu}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a2ea20597a73f4238525debca4014505f}{Init\+Spi}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_mcu_s_t_m32_l0_abd95f830753fd74d9d15b5a441c799dd}{Spi\+Write}} (int value)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a466bd56cae23756c3bfdac88bf0b3ff6}{Spiformat}} (int bits, int mode=0)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a08ba6f34a908e8e118c1f8276dfa767e}{Set\+Spi\+Frequency}} (int hz=1000000)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a58bee4a52ad012eab7691a747f6e1ded}{Rtc\+Init}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_mcu_s_t_m32_l0_ab71a0e92dc7354fbd49953d6b184af80}{Rtc\+Get\+Time\+Second}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_mcu_s_t_m32_l0_af661b085d1bba097de819af3a5d0a183}{Rtc\+Get\+Time\+Ms}} (void)
+\item 
+int \mbox{\hyperlink{class_mcu_s_t_m32_l0_a96a84f57ee2a60edb900505b8c23cf19}{Restore\+Context}} (uint8\+\_\+t $\ast$buffer, uint32\+\_\+t addr, uint32\+\_\+t size)
+\item 
+int \mbox{\hyperlink{class_mcu_s_t_m32_l0_a1e6b6bb844e97540569e470b02521e73}{Store\+Context}} (const void $\ast$buffer, uint32\+\_\+t addr, uint32\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_aa27cfb60d6a8de8e0dca577301593702}{Watch\+Dog\+Start}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_ac4ba79bb4ea368ee3be5caa28a627db3}{Watch\+Dog\+Release}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a69b962b22e3c2c0715334cbab25ae5ad}{Low\+Power\+Timer\+Lo\+Ra\+Init}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a030cf30bd18def0e23b96163bcb8f47d}{Start\+Timer\+Msecond}} (void($\ast$\+\_\+\+Func)(void $\ast$), void $\ast$\+\_\+obj, int delay)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a83ab01e1afdadbf02622e0ec006b2101}{timer\+I\+SR}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a3c06e74b5182d28f26ddb3fec6d9234d}{Set\+Value\+Digital\+Out\+Pin}} (\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} pin, int Value)
+\item 
+int \mbox{\hyperlink{class_mcu_s_t_m32_l0_ae390ee944052cf1d32fd5fb763921db8}{Get\+Value\+Digital\+In\+Pin}} (\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} pin)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a950256ebfaebe49d311b95167ec00998}{Init\+\_\+\+Irq}} (\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} pin)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a981d2d9d62185d36077d9383a4870eba}{Attach\+Interrupt\+In}} (void($\ast$\+\_\+\+Funcext)(void $\ast$), void $\ast$\+\_\+objext)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a3c835a5b4bc7eaaaa13ab4822cd5d67a}{Attach\+Interrupt\+In}} (void($\ast$\+\_\+\+Funcext)(void))
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a0611ce0bfba12f6da5c8753c12ceda65}{Detach\+Interrupt\+In}} (void($\ast$\+\_\+\+Funcext)(void))
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a20414b108d17059f551e3fd928733a15}{Ext\+I\+SR}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_aa5c59fb3cc40e456c8ca2dfb573d2db5}{wait\+\_\+ms}} (int delayms)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a2f73d46dfb58e1145838988645e20045}{wait}} (int delays)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a9b7a19473391bfd637658520b7240173}{Uart\+Init}} (void)
+\item 
+void \mbox{\hyperlink{class_mcu_s_t_m32_l0_a23c56a6c3f82d731a344793288b2c998}{M\+Mprint}} (const char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} \mbox{\hyperlink{class_mcu_s_t_m32_l0_ae51c54974f7c9805c92b303a56af819d}{Mcu\+Mosi}}
+\item 
+\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} \mbox{\hyperlink{class_mcu_s_t_m32_l0_aa9c13e5d4ec21a3a1bafdfa87a31ec68}{Mcu\+Miso}}
+\item 
+\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} \mbox{\hyperlink{class_mcu_s_t_m32_l0_a4162e63da5dfca06d192ee811157be3c}{Mcu\+Sclk}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 170 of file Class\+S\+T\+M32\+L0.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_ae747db3a6df937b07744e0ba492e1a23}\label{class_mcu_s_t_m32_l0_ae747db3a6df937b07744e0ba492e1a23}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Mcu\+S\+T\+M32\+L0()}{McuSTM32L0()}}
+{\footnotesize\ttfamily Mcu\+S\+T\+M32\+L0\+::\+Mcu\+S\+T\+M32\+L0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{mosi,  }\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{miso,  }\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{sclk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 172 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_af440c13e851db1f24a3a1b33990495eb}\label{class_mcu_s_t_m32_l0_af440c13e851db1f24a3a1b33990495eb}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!````~Mcu\+S\+T\+M32\+L0@{$\sim$\+Mcu\+S\+T\+M32\+L0}}
+\index{````~Mcu\+S\+T\+M32\+L0@{$\sim$\+Mcu\+S\+T\+M32\+L0}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{$\sim$\+Mcu\+S\+T\+M32\+L0()}{~McuSTM32L0()}}
+{\footnotesize\ttfamily Mcu\+S\+T\+M32\+L0\+::$\sim$\+Mcu\+S\+T\+M32\+L0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 177 of file Class\+S\+T\+M32\+L0.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a981d2d9d62185d36077d9383a4870eba}\label{class_mcu_s_t_m32_l0_a981d2d9d62185d36077d9383a4870eba}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Attach\+Interrupt\+In@{Attach\+Interrupt\+In}}
+\index{Attach\+Interrupt\+In@{Attach\+Interrupt\+In}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Attach\+Interrupt\+In()}{AttachInterruptIn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Attach\+Interrupt\+In (\begin{DoxyParamCaption}\item[{void($\ast$)(void $\ast$)}]{\+\_\+\+Funcext,  }\item[{void $\ast$}]{\+\_\+objext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 492 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a3c835a5b4bc7eaaaa13ab4822cd5d67a}\label{class_mcu_s_t_m32_l0_a3c835a5b4bc7eaaaa13ab4822cd5d67a}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Attach\+Interrupt\+In@{Attach\+Interrupt\+In}}
+\index{Attach\+Interrupt\+In@{Attach\+Interrupt\+In}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Attach\+Interrupt\+In()}{AttachInterruptIn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Attach\+Interrupt\+In (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{\+\_\+\+Funcext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 497 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a0611ce0bfba12f6da5c8753c12ceda65}\label{class_mcu_s_t_m32_l0_a0611ce0bfba12f6da5c8753c12ceda65}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Detach\+Interrupt\+In@{Detach\+Interrupt\+In}}
+\index{Detach\+Interrupt\+In@{Detach\+Interrupt\+In}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Detach\+Interrupt\+In()}{DetachInterruptIn()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Detach\+Interrupt\+In (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{\+\_\+\+Funcext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 500 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a20414b108d17059f551e3fd928733a15}\label{class_mcu_s_t_m32_l0_a20414b108d17059f551e3fd928733a15}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Ext\+I\+SR@{Ext\+I\+SR}}
+\index{Ext\+I\+SR@{Ext\+I\+SR}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Ext\+I\+S\+R()}{ExtISR()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Ext\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Ext\+I\+SR \begin{DoxyRemark}{Remarks}
+Do Not Modify 
+\end{DoxyRemark}
+
+
+Definition at line 505 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_ae390ee944052cf1d32fd5fb763921db8}\label{class_mcu_s_t_m32_l0_ae390ee944052cf1d32fd5fb763921db8}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Get\+Value\+Digital\+In\+Pin@{Get\+Value\+Digital\+In\+Pin}}
+\index{Get\+Value\+Digital\+In\+Pin@{Get\+Value\+Digital\+In\+Pin}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Get\+Value\+Digital\+In\+Pin()}{GetValueDigitalInPin()}}
+{\footnotesize\ttfamily int Mcu\+S\+T\+M32\+L0\+::\+Get\+Value\+Digital\+In\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 481 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a950256ebfaebe49d311b95167ec00998}\label{class_mcu_s_t_m32_l0_a950256ebfaebe49d311b95167ec00998}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Init\+\_\+\+Irq@{Init\+\_\+\+Irq}}
+\index{Init\+\_\+\+Irq@{Init\+\_\+\+Irq}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Irq()}{Init\_Irq()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Init\+\_\+\+Irq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{pin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_accd83e34546e9a8e5ad338a3ef5a39a3}\label{class_mcu_s_t_m32_l0_accd83e34546e9a8e5ad338a3ef5a39a3}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Init\+Mcu@{Init\+Mcu}}
+\index{Init\+Mcu@{Init\+Mcu}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Init\+Mcu()}{InitMcu()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Init\+Mcu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a2ea20597a73f4238525debca4014505f}\label{class_mcu_s_t_m32_l0_a2ea20597a73f4238525debca4014505f}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Init\+Spi@{Init\+Spi}}
+\index{Init\+Spi@{Init\+Spi}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Init\+Spi()}{InitSpi()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Init\+Spi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a S\+PI master connected to the specified pins
+
+
+\begin{DoxyParams}{Parameters}
+{\em mosi} & S\+PI Master Out, Slave In pin \\
+\hline
+{\em miso} & S\+PI Master In, Slave Out pin \\
+\hline
+{\em sclk} & S\+PI Clock pin \\
+\hline
+\end{DoxyParams}
+S\+P\+I1 G\+P\+IO Configuration ~\newline
+P\+A5 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+S\+CK P\+A6 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+M\+I\+SO P\+A7 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+M\+O\+SI
+
+Definition at line 189 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a69b962b22e3c2c0715334cbab25ae5ad}\label{class_mcu_s_t_m32_l0_a69b962b22e3c2c0715334cbab25ae5ad}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Low\+Power\+Timer\+Lo\+Ra\+Init@{Low\+Power\+Timer\+Lo\+Ra\+Init}}
+\index{Low\+Power\+Timer\+Lo\+Ra\+Init@{Low\+Power\+Timer\+Lo\+Ra\+Init}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Low\+Power\+Timer\+Lo\+Ra\+Init()}{LowPowerTimerLoRaInit()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Low\+Power\+Timer\+Lo\+Ra\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Low\+Power\+Timer\+Lo\+Ra Init \begin{DoxyRemark}{Remarks}
+initializes the dedicated Lo\+Ra\+W\+AN low power timer object. M\+CU specific. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & void \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a23c56a6c3f82d731a344793288b2c998}\label{class_mcu_s_t_m32_l0_a23c56a6c3f82d731a344793288b2c998}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!M\+Mprint@{M\+Mprint}}
+\index{M\+Mprint@{M\+Mprint}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{M\+Mprint()}{MMprint()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+M\+Mprint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a96a84f57ee2a60edb900505b8c23cf19}\label{class_mcu_s_t_m32_l0_a96a84f57ee2a60edb900505b8c23cf19}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Restore\+Context@{Restore\+Context}}
+\index{Restore\+Context@{Restore\+Context}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Restore\+Context()}{RestoreContext()}}
+{\footnotesize\ttfamily int Mcu\+S\+T\+M32\+L0\+::\+Restore\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{addr,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Restore\+Context data from a flash device. ~\newline
+ This method invokes memcpy -\/ reads number of bytes from the address
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Buffer to write to \\
+\hline
+{\em addr} & Flash address to begin reading from \\
+\hline
+{\em size} & Size to read in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, negative error code on failure 
+\end{DoxyReturn}
+
+
+Definition at line 376 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_af661b085d1bba097de819af3a5d0a183}\label{class_mcu_s_t_m32_l0_af661b085d1bba097de819af3a5d0a183}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Rtc\+Get\+Time\+Ms@{Rtc\+Get\+Time\+Ms}}
+\index{Rtc\+Get\+Time\+Ms@{Rtc\+Get\+Time\+Ms}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Rtc\+Get\+Time\+Ms()}{RtcGetTimeMs()}}
+{\footnotesize\ttfamily uint32\+\_\+t Mcu\+S\+T\+M32\+L0\+::\+Rtc\+Get\+Time\+Ms (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Rtc\+Get\+Time\+Ms \+: return the Current Rtc time in Ms \begin{DoxyRemark}{Remarks}
+is used to timestamp radio events (end of TX), will also be used for future classB 
+
+this function may be used by the application. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & void \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & uint32\+\_\+t Current R\+TC time in ms wraps every 49 days \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 344 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_ab71a0e92dc7354fbd49953d6b184af80}\label{class_mcu_s_t_m32_l0_ab71a0e92dc7354fbd49953d6b184af80}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Rtc\+Get\+Time\+Second@{Rtc\+Get\+Time\+Second}}
+\index{Rtc\+Get\+Time\+Second@{Rtc\+Get\+Time\+Second}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Rtc\+Get\+Time\+Second()}{RtcGetTimeSecond()}}
+{\footnotesize\ttfamily uint32\+\_\+t Mcu\+S\+T\+M32\+L0\+::\+Rtc\+Get\+Time\+Second (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Rtc\+Get\+Time\+Second \+: return the Current Rtc time in Second \begin{DoxyRemark}{Remarks}
+is used for \+: 
+
+scheduling autonomous retransmissions (for exemple Nb\+Trans) , transmitting M\+AC answers , basically any delay without accurate time constraints 
+
+also used to measure the time spent inside the Lo\+Ra\+W\+AN process for the integrated failsafe 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & void \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & uint32\+\_\+t R\+TC time in Second \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 319 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a58bee4a52ad012eab7691a747f6e1ded}\label{class_mcu_s_t_m32_l0_a58bee4a52ad012eab7691a747f6e1ded}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Rtc\+Init@{Rtc\+Init}}
+\index{Rtc\+Init@{Rtc\+Init}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Rtc\+Init()}{RtcInit()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Rtc\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Rtc\+Init Function \begin{DoxyRemark}{Remarks}
+must be called before any call to initiliaze the timers 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & void \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 276 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a08ba6f34a908e8e118c1f8276dfa767e}\label{class_mcu_s_t_m32_l0_a08ba6f34a908e8e118c1f8276dfa767e}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Set\+Spi\+Frequency@{Set\+Spi\+Frequency}}
+\index{Set\+Spi\+Frequency@{Set\+Spi\+Frequency}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Set\+Spi\+Frequency()}{SetSpiFrequency()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Set\+Spi\+Frequency (\begin{DoxyParamCaption}\item[{int}]{hz = {\ttfamily 1000000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the spi bus clock frequency
+
+
+\begin{DoxyParams}{Parameters}
+{\em hz} & S\+C\+LK frequency in hz (default = 1\+M\+Hz) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 261 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a3c06e74b5182d28f26ddb3fec6d9234d}\label{class_mcu_s_t_m32_l0_a3c06e74b5182d28f26ddb3fec6d9234d}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Set\+Value\+Digital\+Out\+Pin@{Set\+Value\+Digital\+Out\+Pin}}
+\index{Set\+Value\+Digital\+Out\+Pin@{Set\+Value\+Digital\+Out\+Pin}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Set\+Value\+Digital\+Out\+Pin()}{SetValueDigitalOutPin()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Set\+Value\+Digital\+Out\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}}}]{pin,  }\item[{int}]{Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 471 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a466bd56cae23756c3bfdac88bf0b3ff6}\label{class_mcu_s_t_m32_l0_a466bd56cae23756c3bfdac88bf0b3ff6}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Spiformat@{Spiformat}}
+\index{Spiformat@{Spiformat}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Spiformat()}{Spiformat()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Spiformat (\begin{DoxyParamCaption}\item[{int}]{bits,  }\item[{int}]{mode = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Configure the data transmission format
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Number of bits per S\+PI frame (4 -\/ 16) \\
+\hline
+{\em mode} & Clock polarity and phase mode (0 -\/ 3)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+mode | POL PHA
+-----+--------
+  0  |  0   0
+  1  |  0   1
+  2  |  1   0
+  3  |  1   1
+\end{DoxyCode}
+ 
+
+Definition at line 255 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_abd95f830753fd74d9d15b5a441c799dd}\label{class_mcu_s_t_m32_l0_abd95f830753fd74d9d15b5a441c799dd}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Spi\+Write@{Spi\+Write}}
+\index{Spi\+Write@{Spi\+Write}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Spi\+Write()}{SpiWrite()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mcu\+S\+T\+M32\+L0\+::\+Spi\+Write (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write to the S\+PI Slave and return the response
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be sent to the S\+PI slave\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response from the S\+PI slave 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a030cf30bd18def0e23b96163bcb8f47d}\label{class_mcu_s_t_m32_l0_a030cf30bd18def0e23b96163bcb8f47d}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Start\+Timer\+Msecond@{Start\+Timer\+Msecond}}
+\index{Start\+Timer\+Msecond@{Start\+Timer\+Msecond}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Start\+Timer\+Msecond()}{StartTimerMsecond()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Start\+Timer\+Msecond (\begin{DoxyParamCaption}\item[{void($\ast$)(void $\ast$)}]{\+\_\+\+Func,  }\item[{void $\ast$}]{\+\_\+obj,  }\item[{int}]{delay }\end{DoxyParamCaption})}
+
+Low\+Power\+Timer\+Lo\+Ra Attach\+Msecond
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & ($\ast$ \+\_\+\+Func) (void $\ast$) a static method member of the current Obj \\
+\hline
+{\em $\ast$\+\_\+obj} & a pointer to the current objet \\
+\hline
+{\em int} & delay in ms delay should be between 1ms and 16s. \\
+\hline
+{\em \mbox{[}\+O\+U\+T\mbox{]}} & void ~\newline
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+the code Func = \+\_\+\+Func ; and obj = \+\_\+obj; isn\textquotesingle{}t mcu dependent , and could be keep as already implemented 
+
+starts the Lo\+Ra\+W\+AN dedicated timer and attaches the I\+RQ to the handling Interupt Service Routine in the Lo\+Ra\+W\+AN object. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a1e6b6bb844e97540569e470b02521e73}\label{class_mcu_s_t_m32_l0_a1e6b6bb844e97540569e470b02521e73}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Store\+Context@{Store\+Context}}
+\index{Store\+Context@{Store\+Context}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Store\+Context()}{StoreContext()}}
+{\footnotesize\ttfamily int Mcu\+S\+T\+M32\+L0\+::\+Store\+Context (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{addr,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Store\+Context data to flash To be safer this function have to implement a read/check data sequence after programation
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Buffer of data to be written \\
+\hline
+{\em addr} & Flash Address to begin writing to, \\
+\hline
+{\em size} & Size to write in word 64 bits, \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, negative error code on failure 
+\end{DoxyReturn}
+
+
+Definition at line 396 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a83ab01e1afdadbf02622e0ec006b2101}\label{class_mcu_s_t_m32_l0_a83ab01e1afdadbf02622e0ec006b2101}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!timer\+I\+SR@{timer\+I\+SR}}
+\index{timer\+I\+SR@{timer\+I\+SR}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{timer\+I\+S\+R()}{timerISR()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::timer\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+timer\+I\+SR \begin{DoxyRemark}{Remarks}
+Do Not Modify 
+\end{DoxyRemark}
+
+
+Definition at line 467 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a9b7a19473391bfd637658520b7240173}\label{class_mcu_s_t_m32_l0_a9b7a19473391bfd637658520b7240173}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Uart\+Init@{Uart\+Init}}
+\index{Uart\+Init@{Uart\+Init}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Uart\+Init()}{UartInit()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Uart\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a2f73d46dfb58e1145838988645e20045}\label{class_mcu_s_t_m32_l0_a2f73d46dfb58e1145838988645e20045}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!wait@{wait}}
+\index{wait@{wait}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::wait (\begin{DoxyParamCaption}\item[{int}]{delays }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 519 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_aa5c59fb3cc40e456c8ca2dfb573d2db5}\label{class_mcu_s_t_m32_l0_aa5c59fb3cc40e456c8ca2dfb573d2db5}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!wait\+\_\+ms@{wait\+\_\+ms}}
+\index{wait\+\_\+ms@{wait\+\_\+ms}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{wait\+\_\+ms()}{wait\_ms()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::wait\+\_\+ms (\begin{DoxyParamCaption}\item[{int}]{delayms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 516 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_ac4ba79bb4ea368ee3be5caa28a627db3}\label{class_mcu_s_t_m32_l0_ac4ba79bb4ea368ee3be5caa28a627db3}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Watch\+Dog\+Release@{Watch\+Dog\+Release}}
+\index{Watch\+Dog\+Release@{Watch\+Dog\+Release}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Watch\+Dog\+Release()}{WatchDogRelease()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Watch\+Dog\+Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 437 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_aa27cfb60d6a8de8e0dca577301593702}\label{class_mcu_s_t_m32_l0_aa27cfb60d6a8de8e0dca577301593702}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Watch\+Dog\+Start@{Watch\+Dog\+Start}}
+\index{Watch\+Dog\+Start@{Watch\+Dog\+Start}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Watch\+Dog\+Start()}{WatchDogStart()}}
+{\footnotesize\ttfamily void Mcu\+S\+T\+M32\+L0\+::\+Watch\+Dog\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 423 of file Class\+S\+T\+M32\+L0.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_aa9c13e5d4ec21a3a1bafdfa87a31ec68}\label{class_mcu_s_t_m32_l0_aa9c13e5d4ec21a3a1bafdfa87a31ec68}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Mcu\+Miso@{Mcu\+Miso}}
+\index{Mcu\+Miso@{Mcu\+Miso}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Mcu\+Miso}{McuMiso}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} Mcu\+S\+T\+M32\+L0\+::\+Mcu\+Miso}
+
+
+
+Definition at line 263 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_ae51c54974f7c9805c92b303a56af819d}\label{class_mcu_s_t_m32_l0_ae51c54974f7c9805c92b303a56af819d}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Mcu\+Mosi@{Mcu\+Mosi}}
+\index{Mcu\+Mosi@{Mcu\+Mosi}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Mcu\+Mosi}{McuMosi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} Mcu\+S\+T\+M32\+L0\+::\+Mcu\+Mosi}
+
+
+
+Definition at line 261 of file Class\+S\+T\+M32\+L0.\+h.
+
+\mbox{\Hypertarget{class_mcu_s_t_m32_l0_a4162e63da5dfca06d192ee811157be3c}\label{class_mcu_s_t_m32_l0_a4162e63da5dfca06d192ee811157be3c}} 
+\index{Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}!Mcu\+Sclk@{Mcu\+Sclk}}
+\index{Mcu\+Sclk@{Mcu\+Sclk}!Mcu\+S\+T\+M32\+L0@{Mcu\+S\+T\+M32\+L0}}
+\subsubsection{\texorpdfstring{Mcu\+Sclk}{McuSclk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_class_s_t_m32_l0_8h_a5ceb873075d76667eb54dc6a7d2734d1}{Pin\+Name}} Mcu\+S\+T\+M32\+L0\+::\+Mcu\+Sclk}
+
+
+
+Definition at line 264 of file Class\+S\+T\+M32\+L0.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Mcu\+Api/\mbox{\hyperlink{_class_s_t_m32_l0_8h}{Class\+S\+T\+M32\+L0.\+h}}\end{DoxyCompactItemize}

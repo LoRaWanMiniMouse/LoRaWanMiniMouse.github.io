@@ -1,0 +1,163 @@
+\hypertarget{main_8cpp}{}\section{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.github.\+io/\+M\+Mstack/\+User\+Code/main.cpp File Reference}
+\label{main_8cpp}\index{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+User\+Code/main.\+cpp@{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+User\+Code/main.\+cpp}}
+{\ttfamily \#include \char`\"{}mbed.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Lora\+Mac\+Data\+Store\+In\+Flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Lora\+Wan\+Process.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}User\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}appli.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+X126x.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Api\+Mcu.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs_back_up_flash}{s\+Back\+Up\+Flash}} \mbox{\hyperlink{main_8cpp_af39987ed395cff959b6956b3452952be}{Back\+Up\+Flash}}
+\begin{DoxyCompactList}\small\item\em Back\+Up\+Flash The Lora\+Wan structure parameters save into the flash memory for failsafe restauration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mcu_x_x}{Mcu\+XX}}$<$ \mbox{\hyperlink{class_mcu_s_t_m32_l4}{Mcu\+S\+T\+M32\+L4}} $>$ \mbox{\hyperlink{main_8cpp_a3e7125d0f4c5b5efc1236698c02752ef}{mcu}} (\mbox{\hyperlink{_user_define_8h_a3f5699acd29748e068ddd6d6c28b8fab}{L\+O\+R\+A\+\_\+\+S\+P\+I\+\_\+\+M\+O\+SI}}, \mbox{\hyperlink{_user_define_8h_af8db8e4d626d327ad8a7b2bf4455209c}{L\+O\+R\+A\+\_\+\+S\+P\+I\+\_\+\+M\+I\+SO}}, \mbox{\hyperlink{_user_define_8h_a7d5bea89ac1696411e1f40209e7ebaa7}{L\+O\+R\+A\+\_\+\+S\+P\+I\+\_\+\+S\+C\+LK}})
+\begin{DoxyCompactList}\small\item\em Radio Interrupt Pin declarations. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8cpp_a095120399a6edc8ae3886936fc33eb20}{Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init}} \mbox{[}$\,$\mbox{]} = \{ 0x22, 0x33, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11\}
+\begin{DoxyCompactList}\small\item\em Parameters of the Lora\+Wan\+Keys structure. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8cpp_aa622c47d7e66633f4b919c1e7668f0f7}{Lo\+Ra\+Mac\+App\+S\+Key\+Init}} \mbox{[}$\,$\mbox{]} = \{ 0x11, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22\}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8cpp_aaec460fc9ebcf36ea2ecd5ad4826ec36}{Lo\+Ra\+Mac\+App\+Key\+Init}} \mbox{[}$\,$\mbox{]} = \{ 0x\+B\+B, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11\}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8cpp_a2ed723ad16bfc8c263d17e23dde91bed}{App\+Eui\+Init}} \mbox{[}$\,$\mbox{]} = \{ 0x70, 0xb3, 0xd5, 0x7e, 0xf0, 0x00, 0x36, 0x12 \}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8cpp_a41858b10db6a7676108c1193fd9efaba}{Dev\+Eui\+Init}} \mbox{[}$\,$\mbox{]} = \{ 0x11, 0x22, 0x33, 0x44, 0x44, 0x33, 0x22, 0xbb \}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8cpp_a6103d2355d60728852bb0828c4bad37e}{Lo\+Ra\+Dev\+Addr\+Init}} = 0x26011918
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rtc\+Init , Wake\+Up\+Init, Low\+Power\+Timer\+Lo\+Ra\+Init() are Mcu dependant .
+
+Lp$<$\+Lora\+Regions\+E\+U$>$\+: A Lo\+Ra\+Wan Object with Eu region\textquotesingle{}s rules. \begin{DoxyRemark}{Remarks}
+The Current implementation support radio \mbox{\hyperlink{class_s_x1276}{S\+X1276}} and sx1261
+\end{DoxyRemark}
+Restore the Lora\+Wan Context
+
+For this example \+: send an un confirmed message on port 3 . The user payload is a ramp from 0 to 13 (14 bytes).
+
+Configure a new Data\+Rate Strategy
+
+\begin{DoxyVerb}   This function manages the state of the MAC and performs all the computation intensive (crypto) tasks of the MAC.
+   This function is called periodically by the user’s application whenever the state of the MAC is not idle.
+   The function is not timing critical, can be called at any time and can be interrupted by any IRQ (including the user’s IRQ).
+   The only requirement is that this function must be called at least once between the end of the transmission and the beginning of the RX1 slot.
+   Therefore when the stack is active a call periodicity of roughly 300mSec is recommended.
+\end{DoxyVerb}
+
+
+Send a ¨\+Packet every 120 seconds in case of join Send a packet every App\+Time\+Sleeping seconds in normal mode
+
+Definition at line 53 of file main.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a2ed723ad16bfc8c263d17e23dde91bed}\label{main_8cpp_a2ed723ad16bfc8c263d17e23dde91bed}} 
+\index{main.\+cpp@{main.\+cpp}!App\+Eui\+Init@{App\+Eui\+Init}}
+\index{App\+Eui\+Init@{App\+Eui\+Init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{App\+Eui\+Init}{AppEuiInit}}
+{\footnotesize\ttfamily uint8\+\_\+t App\+Eui\+Init\mbox{[}$\,$\mbox{]} = \{ 0x70, 0xb3, 0xd5, 0x7e, 0xf0, 0x00, 0x36, 0x12 \}}
+
+
+
+Definition at line 49 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_af39987ed395cff959b6956b3452952be}\label{main_8cpp_af39987ed395cff959b6956b3452952be}} 
+\index{main.\+cpp@{main.\+cpp}!Back\+Up\+Flash@{Back\+Up\+Flash}}
+\index{Back\+Up\+Flash@{Back\+Up\+Flash}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Back\+Up\+Flash}{BackUpFlash}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structs_back_up_flash}{s\+Back\+Up\+Flash}} Back\+Up\+Flash}
+
+
+
+Back\+Up\+Flash The Lora\+Wan structure parameters save into the flash memory for failsafe restauration. 
+
+
+
+Definition at line 33 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a41858b10db6a7676108c1193fd9efaba}\label{main_8cpp_a41858b10db6a7676108c1193fd9efaba}} 
+\index{main.\+cpp@{main.\+cpp}!Dev\+Eui\+Init@{Dev\+Eui\+Init}}
+\index{Dev\+Eui\+Init@{Dev\+Eui\+Init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Dev\+Eui\+Init}{DevEuiInit}}
+{\footnotesize\ttfamily uint8\+\_\+t Dev\+Eui\+Init\mbox{[}$\,$\mbox{]} = \{ 0x11, 0x22, 0x33, 0x44, 0x44, 0x33, 0x22, 0xbb \}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a6103d2355d60728852bb0828c4bad37e}\label{main_8cpp_a6103d2355d60728852bb0828c4bad37e}} 
+\index{main.\+cpp@{main.\+cpp}!Lo\+Ra\+Dev\+Addr\+Init@{Lo\+Ra\+Dev\+Addr\+Init}}
+\index{Lo\+Ra\+Dev\+Addr\+Init@{Lo\+Ra\+Dev\+Addr\+Init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Lo\+Ra\+Dev\+Addr\+Init}{LoRaDevAddrInit}}
+{\footnotesize\ttfamily uint32\+\_\+t Lo\+Ra\+Dev\+Addr\+Init = 0x26011918}
+
+
+
+Definition at line 51 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aaec460fc9ebcf36ea2ecd5ad4826ec36}\label{main_8cpp_aaec460fc9ebcf36ea2ecd5ad4826ec36}} 
+\index{main.\+cpp@{main.\+cpp}!Lo\+Ra\+Mac\+App\+Key\+Init@{Lo\+Ra\+Mac\+App\+Key\+Init}}
+\index{Lo\+Ra\+Mac\+App\+Key\+Init@{Lo\+Ra\+Mac\+App\+Key\+Init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Lo\+Ra\+Mac\+App\+Key\+Init}{LoRaMacAppKeyInit}}
+{\footnotesize\ttfamily uint8\+\_\+t Lo\+Ra\+Mac\+App\+Key\+Init\mbox{[}$\,$\mbox{]} = \{ 0x\+B\+B, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11\}}
+
+
+
+Definition at line 48 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aa622c47d7e66633f4b919c1e7668f0f7}\label{main_8cpp_aa622c47d7e66633f4b919c1e7668f0f7}} 
+\index{main.\+cpp@{main.\+cpp}!Lo\+Ra\+Mac\+App\+S\+Key\+Init@{Lo\+Ra\+Mac\+App\+S\+Key\+Init}}
+\index{Lo\+Ra\+Mac\+App\+S\+Key\+Init@{Lo\+Ra\+Mac\+App\+S\+Key\+Init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Lo\+Ra\+Mac\+App\+S\+Key\+Init}{LoRaMacAppSKeyInit}}
+{\footnotesize\ttfamily uint8\+\_\+t Lo\+Ra\+Mac\+App\+S\+Key\+Init\mbox{[}$\,$\mbox{]} = \{ 0x11, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22\}}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a095120399a6edc8ae3886936fc33eb20}\label{main_8cpp_a095120399a6edc8ae3886936fc33eb20}} 
+\index{main.\+cpp@{main.\+cpp}!Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init@{Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init}}
+\index{Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init@{Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init}{LoRaMacNwkSKeyInit}}
+{\footnotesize\ttfamily uint8\+\_\+t Lo\+Ra\+Mac\+Nwk\+S\+Key\+Init\mbox{[}$\,$\mbox{]} = \{ 0x22, 0x33, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11\}}
+
+
+
+Parameters of the Lora\+Wan\+Keys structure. 
+
+\begin{DoxyRemark}{Remarks}
+For A\+PB Devices only Nwk\+Skey, App\+S\+Key and devaddr are mandatory 
+
+For O\+TA Devices only Dev\+E\+UI, App\+E\+UI and App\+Key are mandatory 
+\end{DoxyRemark}
+
+
+Definition at line 46 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a3e7125d0f4c5b5efc1236698c02752ef}\label{main_8cpp_a3e7125d0f4c5b5efc1236698c02752ef}} 
+\index{main.\+cpp@{main.\+cpp}!mcu@{mcu}}
+\index{mcu@{mcu}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{mcu}{mcu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mcu_x_x}{Mcu\+XX}}$<$\mbox{\hyperlink{class_mcu_s_t_m32_l4}{Mcu\+S\+T\+M32\+L4}}$>$ mcu(\mbox{\hyperlink{_user_define_8h_a3f5699acd29748e068ddd6d6c28b8fab}{L\+O\+R\+A\+\_\+\+S\+P\+I\+\_\+\+M\+O\+SI}}, \mbox{\hyperlink{_user_define_8h_af8db8e4d626d327ad8a7b2bf4455209c}{L\+O\+R\+A\+\_\+\+S\+P\+I\+\_\+\+M\+I\+SO}}, \mbox{\hyperlink{_user_define_8h_a7d5bea89ac1696411e1f40209e7ebaa7}{L\+O\+R\+A\+\_\+\+S\+P\+I\+\_\+\+S\+C\+LK}})}
+
+
+
+Radio Interrupt Pin declarations. 
+

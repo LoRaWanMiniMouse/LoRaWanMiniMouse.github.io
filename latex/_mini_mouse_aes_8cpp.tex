@@ -1,0 +1,334 @@
+\hypertarget{_mini_mouse_aes_8cpp}{}\section{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.github.\+io/\+M\+Mstack/\+Minimouse\+Src/\+Mini\+Mouse\+Aes.cpp File Reference}
+\label{_mini_mouse_aes_8cpp}\index{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\+Mini\+Mouse\+Aes.\+cpp@{C\+:/\+G\+I\+T\+E\+X\+T/githubdoc/\+Lo\+Ra\+Wan\+Mini\+Mouse.\+github.\+io/\+M\+Mstack/\+Minimouse\+Src/\+Mini\+Mouse\+Aes.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}aes.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_ab7aef13fbdead81e2d3ab96eb3630f10}{U\+S\+E\+\_\+\+T\+A\+B\+L\+ES}}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_ac40209feb00db6f009389419498d2066}{V\+E\+R\+S\+I\+O\+N\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}~0x011b
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a77c5bde3251e897058c8491bd2335c91}{B\+P\+O\+LY}}~0x1b
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a7dc5fb6478333a4f4cb3f55360f51d85}{D\+P\+O\+LY}}~0x008d
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_af26abb8c819fd3cf4d6cb0711c80b9ee}{f1}}(x)~(x)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x)~((x $<$$<$ 1) $^\wedge$ (((x $>$$>$ 7) \& 1) $\ast$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}))
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}{f4}}(x)~((x $<$$<$ 2) $^\wedge$ (((x $>$$>$ 6) \& 1) $\ast$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}) $^\wedge$ (((x $>$$>$ 6) \& 2) $\ast$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}))
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a2087aa6d56cb1111b2483bc1207c050a}{d2}}(x)~(((x) $>$$>$ 1) $^\wedge$ ((x) \& 1 ? \mbox{\hyperlink{_mini_mouse_aes_8cpp_a7dc5fb6478333a4f4cb3f55360f51d85}{D\+P\+O\+LY}} \+: 0))
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_abae335fbd04dfd4dfea78528d0ed5f38}{f3}}(x)~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x) $^\wedge$ x)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a0250d3dc2d2afe1eb2054de3b86ecfd7}{f9}}(x)~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ x)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a15fd0649edbc944c71fd478892026f17}{fb}}(x)~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x) $^\wedge$ x)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a78eca4dcca91c6f7a65890d87d4795c5}{fd}}(x)~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}{f4}}(x) $^\wedge$ x)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a590ce7a678e3262b26a62caddd445eef}{fe}}(x)~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}{f4}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x))
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5966ee704de281b64b470dc19865ba73}{sb\+\_\+data}}(w)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a49e094309b29bb309197741fcd33761d}{isb\+\_\+data}}(w)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a28c686a91195f4d0b38c58a7ed5c3340}{mm\+\_\+data}}(w)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a9006aafb3746fe0f41fb827589734d2f}{s\+\_\+box}}(x)~sbox\mbox{[}(x)\mbox{]}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5dae72835839ca71434aca7737a73cfb}{gfm2\+\_\+sb}}(x)~gfm2\+\_\+sbox\mbox{[}(x)\mbox{]}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_aa88e27a7fdb6919aeaebd89cb1e05ffe}{gfm3\+\_\+sb}}(x)~gfm3\+\_\+sbox\mbox{[}(x)\mbox{]}
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_ab4a934eb025568ddd7da2acb02c7001d}{block\+\_\+copy\+\_\+nn}}(d,  s,  l)~copy\+\_\+block\+\_\+nn(d, s, l)
+\item 
+\#define \mbox{\hyperlink{_mini_mouse_aes_8cpp_a85797c367f802e5a095e54157b12b785}{block\+\_\+copy}}(d,  s)~copy\+\_\+block(d, s)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{aes_8h_a939cc04a88913455efd7cc8fc15f80cf}{return\+\_\+type}} \mbox{\hyperlink{_mini_mouse_aes_8cpp_a0ffc37ee1bbb50e7147bf6e7de5d73a1}{aes\+\_\+set\+\_\+key}} (const uint8\+\_\+t key\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{aes_8h_a9bedd830746c77c108ff50ec5c704256}{length\+\_\+type}} keylen, \mbox{\hyperlink{structaes__context}{aes\+\_\+context}} ctx\mbox{[}1\mbox{]})
+\item 
+\mbox{\hyperlink{aes_8h_a939cc04a88913455efd7cc8fc15f80cf}{return\+\_\+type}} \mbox{\hyperlink{_mini_mouse_aes_8cpp_ac88fd4e9cb53f78713a8fce1a6fcffc0}{aes\+\_\+encrypt}} (const uint8\+\_\+t in\mbox{[}\mbox{\hyperlink{aes_8h_a64c8b1a34c03210cc4c214735bb4f186}{N\+\_\+\+B\+L\+O\+CK}}\mbox{]}, uint8\+\_\+t out\mbox{[}\mbox{\hyperlink{aes_8h_a64c8b1a34c03210cc4c214735bb4f186}{N\+\_\+\+B\+L\+O\+CK}}\mbox{]}, const \mbox{\hyperlink{structaes__context}{aes\+\_\+context}} ctx\mbox{[}1\mbox{]})
+\item 
+\mbox{\hyperlink{aes_8h_a939cc04a88913455efd7cc8fc15f80cf}{return\+\_\+type}} \mbox{\hyperlink{_mini_mouse_aes_8cpp_aafdeb6720bdc985cefd83f837bbb55da}{aes\+\_\+cbc\+\_\+encrypt}} (const uint8\+\_\+t $\ast$in, uint8\+\_\+t $\ast$out, int32\+\_\+t n\+\_\+block, uint8\+\_\+t iv\mbox{[}\mbox{\hyperlink{aes_8h_a64c8b1a34c03210cc4c214735bb4f186}{N\+\_\+\+B\+L\+O\+CK}}\mbox{]}, const \mbox{\hyperlink{structaes__context}{aes\+\_\+context}} ctx\mbox{[}1\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a85797c367f802e5a095e54157b12b785}\label{_mini_mouse_aes_8cpp_a85797c367f802e5a095e54157b12b785}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!block\+\_\+copy@{block\+\_\+copy}}
+\index{block\+\_\+copy@{block\+\_\+copy}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{block\+\_\+copy}{block\_copy}}
+{\footnotesize\ttfamily \#define block\+\_\+copy(\begin{DoxyParamCaption}\item[{}]{d,  }\item[{}]{s }\end{DoxyParamCaption})~copy\+\_\+block(d, s)}
+
+
+
+Definition at line 312 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_ab4a934eb025568ddd7da2acb02c7001d}\label{_mini_mouse_aes_8cpp_ab4a934eb025568ddd7da2acb02c7001d}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!block\+\_\+copy\+\_\+nn@{block\+\_\+copy\+\_\+nn}}
+\index{block\+\_\+copy\+\_\+nn@{block\+\_\+copy\+\_\+nn}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{block\+\_\+copy\+\_\+nn}{block\_copy\_nn}}
+{\footnotesize\ttfamily \#define block\+\_\+copy\+\_\+nn(\begin{DoxyParamCaption}\item[{}]{d,  }\item[{}]{s,  }\item[{}]{l }\end{DoxyParamCaption})~copy\+\_\+block\+\_\+nn(d, s, l)}
+
+
+
+Definition at line 311 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a77c5bde3251e897058c8491bd2335c91}\label{_mini_mouse_aes_8cpp_a77c5bde3251e897058c8491bd2335c91}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!B\+P\+O\+LY@{B\+P\+O\+LY}}
+\index{B\+P\+O\+LY@{B\+P\+O\+LY}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{B\+P\+O\+LY}{BPOLY}}
+{\footnotesize\ttfamily \#define B\+P\+O\+LY~0x1b}
+
+
+
+Definition at line 74 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a2087aa6d56cb1111b2483bc1207c050a}\label{_mini_mouse_aes_8cpp_a2087aa6d56cb1111b2483bc1207c050a}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!d2@{d2}}
+\index{d2@{d2}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{d2}{d2}}
+{\footnotesize\ttfamily \#define d2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) $>$$>$ 1) $^\wedge$ ((x) \& 1 ? \mbox{\hyperlink{_mini_mouse_aes_8cpp_a7dc5fb6478333a4f4cb3f55360f51d85}{D\+P\+O\+LY}} \+: 0))}
+
+
+
+Definition at line 82 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a7dc5fb6478333a4f4cb3f55360f51d85}\label{_mini_mouse_aes_8cpp_a7dc5fb6478333a4f4cb3f55360f51d85}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!D\+P\+O\+LY@{D\+P\+O\+LY}}
+\index{D\+P\+O\+LY@{D\+P\+O\+LY}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{D\+P\+O\+LY}{DPOLY}}
+{\footnotesize\ttfamily \#define D\+P\+O\+LY~0x008d}
+
+
+
+Definition at line 75 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_af26abb8c819fd3cf4d6cb0711c80b9ee}\label{_mini_mouse_aes_8cpp_af26abb8c819fd3cf4d6cb0711c80b9ee}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!f1@{f1}}
+\index{f1@{f1}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{f1}{f1}}
+{\footnotesize\ttfamily \#define f1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+
+
+
+Definition at line 77 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}\label{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!f2@{f2}}
+\index{f2@{f2}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{f2}{f2}}
+{\footnotesize\ttfamily \#define f2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x $<$$<$ 1) $^\wedge$ (((x $>$$>$ 7) \& 1) $\ast$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}))}
+
+
+
+Definition at line 78 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_abae335fbd04dfd4dfea78528d0ed5f38}\label{_mini_mouse_aes_8cpp_abae335fbd04dfd4dfea78528d0ed5f38}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!f3@{f3}}
+\index{f3@{f3}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{f3}{f3}}
+{\footnotesize\ttfamily \#define f3(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x) $^\wedge$ x)}
+
+
+
+Definition at line 84 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}\label{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!f4@{f4}}
+\index{f4@{f4}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{f4}{f4}}
+{\footnotesize\ttfamily \#define f4(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x $<$$<$ 2) $^\wedge$ (((x $>$$>$ 6) \& 1) $\ast$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}) $^\wedge$ (((x $>$$>$ 6) \& 2) $\ast$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{W\+P\+O\+LY}}))}
+
+
+
+Definition at line 79 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}\label{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!f8@{f8}}
+\index{f8@{f8}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{f8}{f8}}
+{\footnotesize\ttfamily \#define f8(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((x << 3) ^ (((x >> 5) & 1) * \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{WPOLY}}) ^ (((x >> 5) & 2) * \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{WPOLY}}) \(\backslash\)
+                          ^ (((x >> 5) & 4) * \mbox{\hyperlink{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}{WPOLY}}))
+\end{DoxyCode}
+
+
+Definition at line 80 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a0250d3dc2d2afe1eb2054de3b86ecfd7}\label{_mini_mouse_aes_8cpp_a0250d3dc2d2afe1eb2054de3b86ecfd7}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!f9@{f9}}
+\index{f9@{f9}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{f9}{f9}}
+{\footnotesize\ttfamily \#define f9(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ x)}
+
+
+
+Definition at line 85 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a15fd0649edbc944c71fd478892026f17}\label{_mini_mouse_aes_8cpp_a15fd0649edbc944c71fd478892026f17}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!fb@{fb}}
+\index{fb@{fb}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{fb}{fb}}
+{\footnotesize\ttfamily \#define fb(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x) $^\wedge$ x)}
+
+
+
+Definition at line 86 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a78eca4dcca91c6f7a65890d87d4795c5}\label{_mini_mouse_aes_8cpp_a78eca4dcca91c6f7a65890d87d4795c5}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!fd@{fd}}
+\index{fd@{fd}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily \#define fd(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}{f4}}(x) $^\wedge$ x)}
+
+
+
+Definition at line 87 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a590ce7a678e3262b26a62caddd445eef}\label{_mini_mouse_aes_8cpp_a590ce7a678e3262b26a62caddd445eef}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!fe@{fe}}
+\index{fe@{fe}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{fe}{fe}}
+{\footnotesize\ttfamily \#define fe(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{_mini_mouse_aes_8cpp_a17724e8bbf2490d74b26829de5916cab}{f8}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a4938c6d949d0932e1f2c149745618bb1}{f4}}(x) $^\wedge$ \mbox{\hyperlink{_mini_mouse_aes_8cpp_a5cd67c8452696b8eebb34709acc71f36}{f2}}(x))}
+
+
+
+Definition at line 88 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a5dae72835839ca71434aca7737a73cfb}\label{_mini_mouse_aes_8cpp_a5dae72835839ca71434aca7737a73cfb}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!gfm2\+\_\+sb@{gfm2\+\_\+sb}}
+\index{gfm2\+\_\+sb@{gfm2\+\_\+sb}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{gfm2\+\_\+sb}{gfm2\_sb}}
+{\footnotesize\ttfamily \#define gfm2\+\_\+sb(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~gfm2\+\_\+sbox\mbox{[}(x)\mbox{]}}
+
+
+
+Definition at line 214 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_aa88e27a7fdb6919aeaebd89cb1e05ffe}\label{_mini_mouse_aes_8cpp_aa88e27a7fdb6919aeaebd89cb1e05ffe}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!gfm3\+\_\+sb@{gfm3\+\_\+sb}}
+\index{gfm3\+\_\+sb@{gfm3\+\_\+sb}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{gfm3\+\_\+sb}{gfm3\_sb}}
+{\footnotesize\ttfamily \#define gfm3\+\_\+sb(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~gfm3\+\_\+sbox\mbox{[}(x)\mbox{]}}
+
+
+
+Definition at line 215 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a49e094309b29bb309197741fcd33761d}\label{_mini_mouse_aes_8cpp_a49e094309b29bb309197741fcd33761d}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!isb\+\_\+data@{isb\+\_\+data}}
+\index{isb\+\_\+data@{isb\+\_\+data}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{isb\+\_\+data}{isb\_data}}
+{\footnotesize\ttfamily \#define isb\+\_\+data(\begin{DoxyParamCaption}\item[{}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a28c686a91195f4d0b38c58a7ed5c3340}\label{_mini_mouse_aes_8cpp_a28c686a91195f4d0b38c58a7ed5c3340}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!mm\+\_\+data@{mm\+\_\+data}}
+\index{mm\+\_\+data@{mm\+\_\+data}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{mm\+\_\+data}{mm\_data}}
+{\footnotesize\ttfamily \#define mm\+\_\+data(\begin{DoxyParamCaption}\item[{}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 160 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a9006aafb3746fe0f41fb827589734d2f}\label{_mini_mouse_aes_8cpp_a9006aafb3746fe0f41fb827589734d2f}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!s\+\_\+box@{s\+\_\+box}}
+\index{s\+\_\+box@{s\+\_\+box}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{s\+\_\+box}{s\_box}}
+{\footnotesize\ttfamily \#define s\+\_\+box(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~sbox\mbox{[}(x)\mbox{]}}
+
+
+
+Definition at line 210 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a5966ee704de281b64b470dc19865ba73}\label{_mini_mouse_aes_8cpp_a5966ee704de281b64b470dc19865ba73}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!sb\+\_\+data@{sb\+\_\+data}}
+\index{sb\+\_\+data@{sb\+\_\+data}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{sb\+\_\+data}{sb\_data}}
+{\footnotesize\ttfamily \#define sb\+\_\+data(\begin{DoxyParamCaption}\item[{}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_ab7aef13fbdead81e2d3ab96eb3630f10}\label{_mini_mouse_aes_8cpp_ab7aef13fbdead81e2d3ab96eb3630f10}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!U\+S\+E\+\_\+\+T\+A\+B\+L\+ES@{U\+S\+E\+\_\+\+T\+A\+B\+L\+ES}}
+\index{U\+S\+E\+\_\+\+T\+A\+B\+L\+ES@{U\+S\+E\+\_\+\+T\+A\+B\+L\+ES}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{U\+S\+E\+\_\+\+T\+A\+B\+L\+ES}{USE\_TABLES}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+T\+A\+B\+L\+ES}
+
+
+
+Definition at line 55 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_ac40209feb00db6f009389419498d2066}\label{_mini_mouse_aes_8cpp_ac40209feb00db6f009389419498d2066}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!V\+E\+R\+S\+I\+O\+N\+\_\+1@{V\+E\+R\+S\+I\+O\+N\+\_\+1}}
+\index{V\+E\+R\+S\+I\+O\+N\+\_\+1@{V\+E\+R\+S\+I\+O\+N\+\_\+1}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{V\+E\+R\+S\+I\+O\+N\+\_\+1}{VERSION\_1}}
+{\footnotesize\ttfamily \#define V\+E\+R\+S\+I\+O\+N\+\_\+1}
+
+
+
+Definition at line 62 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}\label{_mini_mouse_aes_8cpp_a42a5cd32857f360475450233f8367515}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!W\+P\+O\+LY@{W\+P\+O\+LY}}
+\index{W\+P\+O\+LY@{W\+P\+O\+LY}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{W\+P\+O\+LY}{WPOLY}}
+{\footnotesize\ttfamily \#define W\+P\+O\+LY~0x011b}
+
+
+
+Definition at line 73 of file Mini\+Mouse\+Aes.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_aafdeb6720bdc985cefd83f837bbb55da}\label{_mini_mouse_aes_8cpp_aafdeb6720bdc985cefd83f837bbb55da}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!aes\+\_\+cbc\+\_\+encrypt@{aes\+\_\+cbc\+\_\+encrypt}}
+\index{aes\+\_\+cbc\+\_\+encrypt@{aes\+\_\+cbc\+\_\+encrypt}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{aes\+\_\+cbc\+\_\+encrypt()}{aes\_cbc\_encrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{aes_8h_a939cc04a88913455efd7cc8fc15f80cf}{return\+\_\+type}} aes\+\_\+cbc\+\_\+encrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{int32\+\_\+t}]{n\+\_\+block,  }\item[{uint8\+\_\+t}]{iv\mbox{[}\+N\+\_\+\+B\+L\+O\+C\+K\mbox{]},  }\item[{const \mbox{\hyperlink{structaes__context}{aes\+\_\+context}}}]{ctx\mbox{[}1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 597 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_ac88fd4e9cb53f78713a8fce1a6fcffc0}\label{_mini_mouse_aes_8cpp_ac88fd4e9cb53f78713a8fce1a6fcffc0}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!aes\+\_\+encrypt@{aes\+\_\+encrypt}}
+\index{aes\+\_\+encrypt@{aes\+\_\+encrypt}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{aes\+\_\+encrypt()}{aes\_encrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{aes_8h_a939cc04a88913455efd7cc8fc15f80cf}{return\+\_\+type}} aes\+\_\+encrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{in\mbox{[}\+N\+\_\+\+B\+L\+O\+C\+K\mbox{]},  }\item[{uint8\+\_\+t}]{out\mbox{[}\+N\+\_\+\+B\+L\+O\+C\+K\mbox{]},  }\item[{const \mbox{\hyperlink{structaes__context}{aes\+\_\+context}}}]{ctx\mbox{[}1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 568 of file Mini\+Mouse\+Aes.\+cpp.
+
+\mbox{\Hypertarget{_mini_mouse_aes_8cpp_a0ffc37ee1bbb50e7147bf6e7de5d73a1}\label{_mini_mouse_aes_8cpp_a0ffc37ee1bbb50e7147bf6e7de5d73a1}} 
+\index{Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}!aes\+\_\+set\+\_\+key@{aes\+\_\+set\+\_\+key}}
+\index{aes\+\_\+set\+\_\+key@{aes\+\_\+set\+\_\+key}!Mini\+Mouse\+Aes.\+cpp@{Mini\+Mouse\+Aes.\+cpp}}
+\subsubsection{\texorpdfstring{aes\+\_\+set\+\_\+key()}{aes\_set\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{aes_8h_a939cc04a88913455efd7cc8fc15f80cf}{return\+\_\+type}} aes\+\_\+set\+\_\+key (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{key\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{aes_8h_a9bedd830746c77c108ff50ec5c704256}{length\+\_\+type}}}]{keylen,  }\item[{\mbox{\hyperlink{structaes__context}{aes\+\_\+context}}}]{ctx\mbox{[}1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 513 of file Mini\+Mouse\+Aes.\+cpp.
+
